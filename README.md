@@ -1,13 +1,13 @@
 # caffe pizzeria restaurant Venezia
 Re-design of original website for caffe pizzeria restaurant Venezia.
 
-## Built with
+###### Built with
 - HTML (with BEM)
 - CSS (using SASS)
 - JavaScript
 
-## Version history
+###### Version history
 - 1.0.0 Created repository and deployed to Github pages.
 
-## Author
+###### Author
 - Pavo Gabrić
