@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Caffe Pizzeria Venezia</title>
+</head>
+<body>
+    <div class="bg__container">
+        <img src="slike/pizza-bg.png" alt="pizza" class="pizza">
+        <img src="slike/grozde-bg.png" alt="grozde" class="grapes">
+        <img src="slike/sir-bg.png" alt="sir" class="cheese">
+        <img src="slike/list-bg.png" alt="list" class="leaf">
+        <img src="slike/gljiva_list-bg.png" alt="gljiva-list" class="mushroom">
+        <img src="slike/pribor.png" alt="pribor" class="forks">
+        <img src="slike/grancica.png" alt="grancica" class="olive">
+        <img src="slike/pizza_full.png" alt="pizza-full" class="pizza-full">
+    </div>
+
+    <header>
+        <div class="header__container">
+            <div class="logo">
+                <img src="slike/logo.png" alt="Logo">
+            </div>
+
+            <div class="hamb-menu" onclick="showNav()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="#">Početna</a></li>
+                    <li><a href="#about">O nama</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#services">Usluge</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <nav class="nav__mobile">
+            <ul>
+                <li><a href="#" onclick="hideNav()">Početna</a></li>
+                <li><a href="#about" onclick="hideNav()">O nama</a></li>
+                <li><a href="#menu" onclick="hideNav()">Menu</a></li>
+                <li><a href="#services" onclick="hideNav()">Usluge</a></li>
+                <li><a href="#contact" onclick="hideNav()">Kontakt</a></li>
+                <div class="dostava">
+                    <li>Dostava tel : 030/793-558</li>
+                    <li>Dostava mob : 063/592-717</li>
+                </div>
+                <li><a href="https://www.facebook.com/pizzeriavenezianovitravnik/" target="_blank" onclick="hideNav()"><img src="slike/001-facebook.svg" alt="fb" class="fb"></a>
+                    <a href="https://www.instagram.com/caffe_pizzeria_venezia/" target="_blank" onclick="hideNav()"><img src="slike/002-instagram.svg" alt="insta" class="insta"></a>
+                </li>
+
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero"></div>
+
+
+    <main>
+        <section class="about" id="about">
+            <div class="row">
+                <div class="about__desc right">
+                    <div class="heading">
+                        <span>tko smo mi</span>
+                        <h1>Naša priča</h1>
+                    </div>
+                    <p>
+                        Smješten u donjem dijelu grada, pizzeria-restoran Venezia je obiteljski lokal sa tradicijom dugom preko 25 godina nudeći svojim gostima raznovrsne specijalitete talijanske i domaće kuhinje.
+                        Moderan i prostran interijer sa otvorenom terasom savršenom za ljetne dane osigurat će svakom gostu ugodnu posjetu i ambijent. Ljubazno osoblje će se pobrinuti da vaš svaki dolazak ostane u lijepom sjećanju. Da bi vaše privatno ili poslovno slavlje ostalo upamćeno u jedinstvenoj atmosferi, besprijekornoj organizaciji i vrhunskom uslugom, bez bojazni, dođite u naš restoran da budete nasmijan domaćin i zadovoljan gost!
+                    </p>
+                </div>
+    
+                <div class="about__photo">
+                    <div class="about__photo-container">
+                        <img src="slike/about-1.jpg" alt="Restoran" class="bg">
+                        <img src="slike/about-1-black.jpg" alt="Restoran" class="black-bg">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+    
+                <div class="about__photo">
+                    <div class="about__photo-container">
+                        <img src="slike/about-2.jpg" alt="Restoran" class="bg">
+                        <img src="slike/about-2-red-l.jpg" alt="Restoran" class="red-bg">
+                    </div>
+                </div>
+
+                <div class="about__desc left">
+                    <div class="heading">
+                        <span>povijest</span>
+                        <h1>Kako je sve počelo</h1>
+                    </div>
+                    <p>
+                        Naša priča započinje 1992. godine kada smo otvorili pizzeriu Venezia koja je do 1999. godine radila u iznamljenom prostoru. 1999. godine kupljen je sadašnji prostor i objekat nastavlja uspješno raditi. Godine 2014. obogatili smo našu ponudu a La Carte jelima, a revoluciju u našem radu donijeli smo sa poznatim Pipi sendvičem i našim catering uslugama. 2015. godine u naše usluge uvrstili smo i privatni prostor za manje privatne i poslovne prigode. 2018. i 2019. godine kapacitet restorana je proširen sa tadašnjih 80 na još 70 sjedećih mjesta i prostor smo zaokružili sa ljetnom terasom.
+                    </p>
+                    
+                </div>
+
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+
+            
+                <img src="slike/venezia_01.jpg" alt="one">
+                <img src="slike/venezia_02.jpg" alt="one">
+                <img src="slike/venezia_03.jpg" alt="one">
+            
+
+            
+                <img src="slike/venezia_04.jpg" alt="one">
+                <img src="slike/venezia_05.jpg" alt="one">
+                <img src="slike/venezia_09.jpg" alt="one">
+            
+
+            
+                <img src="slike/venezia_08.jpg" alt="one">
+                <img src="slike/venezia_06.jpg" alt="one">
+                <img src="slike/venezia_07.jpg" alt="one" class="last">
+            
+            
+           
+            
+        </section>
+
+
+        <section class="menu" id="menu">
+            <div class="menu__container">
+                <div class="menu__desc"> 
+
+                    <div class="heading">
+                        <span>najbolji sastojci</span>
+                        <h1>Kuhinja & jelovnik</h1>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+                    <button><a href="#">Preuzmi jelovnik</a></button>
+                </div>
+
+                <div class="menu__photo"> 
+                    <div class="menu__photo-container">
+                        <img src="slike/sec-bg.jpg" alt="Gray bg">
+                        <img src="slike/menu.jpg" alt="Menu">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="services" id="services">
+                <div class="heading">
+                    <span>proslave & catering</span>
+                    <h1>Usluge koje nudimo</h1>
+                </div>
+    
+                <div class="services__row">
+                    <div class="services__desc">
+                        <h2>Catering usluge</h2>
+                        <p>Lijepi trenuci su ono što dugo pamtimo. Izaberite VENEZIA catering za ukusnije zalogaje u životu.</br></br>
+    
+                        U mogućnosti smo vam ponuditi Catering usluge na vašoj adresi ili bilo gdje drugo, kako za proslave i privatne zabave, tako i za druge vrste događaja (svadbe, rođendanske zabave, vjerski praznici, zakuske, koktel prijemi itd…).</br></br>
+                            
+                        Ukoliko želite samo švedski stol ili plate tu smo za vas.</br> </br>
+                            
+                        VENEZIA catering vam nudi stolove, stolice, sitni inventar (escajg, tanjiri, čaše), dekorativni inventar (sviječnjaci, vazne, ukrasne trake za stolice), te profesionalno osoblje (konobari, koktel majstori, šankeri itd). Za više informacija obratite se našem timu jer tu smo zbog Vas...</p>
+                    </div>
+    
+                    <div class="services__photo">
+                        <div class="services__photo-container">
+                            <img src="slike/tall-black-bg.jpg" alt="Black bg">
+                            <img src="slike/catering.jpg" alt="Catering">
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="services__row">
+                    <div class="services__desc">
+                        <h2>Prostor & proslave</h2>
+                        <p>Pizzeria Venezia Novi Travnik je napravila prostor koji je moderno uređen, oplemenjen 
+                        sofisticiranim detaljima, pogodan za rođendane, krizme, pričesti tj za sve proslave manjeg 
+                        kapaciteta. Budući da raspolaže potrebnom tehničkom opremom, odličan je izbor za Vas da 
+                        nama prepustite sve detalje oko organizacije vaših proslava. </br></br>
+                        
+                        U prekrasnom prostoru prostor Venezia smještena je sala kapaciteta od 90 do 120 mjesta, 
+                        dečija igraonica ispred prostora. Prostran parking se nalazi ispred objekta i na raspolaganju je 
+                        našim gostima.</br></br>
+                        
+                        Kako bi Vaše privatno ili poslovno slavlje ostalo zapamćeno po jedinstvenom prostoru, 
+                        prijatnoj i toploj atmosferi, besprekornoj organizaciji i vrhunskom posluženju, bez bojazni 
+                        dođite u prostor Veneziu, da budete nasmijan domaćin i zadovoljan gost!</p>
+                    </div>
+    
+                    <div class="services__photo">
+                        <div class="services__photo-container">
+                            <img src="slike/tall-red-bg.jpg" alt="Red bg">
+                            <img src="slike/proslave.jpg" alt="Catering">
+                        </div>
+                    </div>
+    
+                </div>
+        </section>
+
+
+        <section class="gallery" id="gallery">
+            <img src="slike/usluge_01.jpg" alt="one" class="first">
+            <img src="slike/usluge_02.jpg" alt="one">
+            <img src="slike/1.jpg" alt="one">
+            <img src="slike/4.jpg" alt="four">
+            <img src="slike/2.jpg" alt="two">
+            
+        </section>
+
+
+        <section class="contact" id="contact">
+            <div class="heading">
+                <span>dobro poznata lokacija</span>
+                <h1>Gdje se nalazimo?</h1>
+            </div>
+    
+                
+            <div class="contact__wrapper">
+
+                <figure class="contact__logo"><img src="slike/logo-big.png" alt="logo"></figure>
+                
+                <div class="contact__info">
+                    <div class="contact__info-box">
+                        <h3>Lokacija</h3>
+                        <ul>
+                            <li>Ulica Ive Andrića bb,</li>
+                            <li>Novi Travnik 72290</li>
+                            <li>Bosna i Hercegovina</li>
+                            <li><a href="https://www.google.com/maps/place/Pizzeria+Venezia/@44.1742877,17.6634107,15z/data=!4m2!3m1!1s0x0:0x6bb29808f977bedd?sa=X&ved=2ahUKEwjyi5TR8vToAhWnlYsKHeW-CdwQ_BIwEXoECBoQCA">Google lokacija</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="contact__info-box">
+                        <h3>Kontakt podaci</h3>
+                        <ul>
+                            <li>catering info: +387 63 333 167</li>
+                            <li>restoran: +387 30 793 558</li>
+                            <li>dostava: +387 63 592 717</li>
+                            <li><a href="#">markobarnjakrog@gmail.com</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="contact__info-box">
+                        <h3>Radno vrijeme</h3>
+                        <ul>
+                            <li>Pon - pet: 07h-24h</li>
+                            <li>Sub - ned: 08h-23h</li>
+                            <li><span>Parking za goste</span></li>
+                        </ul>
+                    </div>
+    
+                    <div class="contact__info-box">
+                        <h3>Pratite nas</h3>
+                        <ul>
+                            <li><img src="slike/001-facebook.svg" alt="fb" class="icons"><a href="https://www.facebook.com/pizzeriavenezianovitravnik/" class="social" target="_blank">Caffe pizzeria Venezia</a></li>
+                            <li><img src="slike/002-instagram.svg" alt="insta" class="icons"><a href="https://www.instagram.com/caffe_pizzeria_venezia/" class="social" target="_blank">Caffe pizzeria Venezia</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11446.36421655515!2d17.6634107!3d44.1742877!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6bb29808f977bedd!2sPizzeria%20Venezia!5e0!3m2!1shr!2sba!4v1586779874694!5m2!1shr!2sba" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+<script src="js/app.js"></script>
+</body>
+</html>
