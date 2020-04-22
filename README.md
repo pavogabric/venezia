@@ -11,6 +11,7 @@ Re-design of original website for caffe pizzeria restaurant Venezia.
 ### Version history
 
 - 1.0.0 Created repository and deployed to Github pages.
+- 1.0.1 Horizontal scrollbar and background fix
 
 ### Author
 
