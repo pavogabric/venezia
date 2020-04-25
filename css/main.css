@@ -454,6 +454,12 @@ header.colored {
   z-index: -1;
 }
 
+.menu__desc a {
+  padding-bottom: 0;
+  border-bottom: none;
+  color: #f9f5f6;
+}
+
 .menu__desc p {
   margin: 1.25em 0 2.75em 0;
 }
