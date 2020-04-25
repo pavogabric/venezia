@@ -1,8 +1,10 @@
 const hamb = document.querySelector('.hamb-menu');
+const navContainer = document.querySelector('.slideInNav');
 const nav = document.querySelector('.nav__mobile');
 
 function showNav(){
     hamb.classList.toggle('change');
+    navContainer.classList.toggle('active');
     nav.classList.toggle('show');
 }
 
@@ -18,6 +20,7 @@ window.onscroll = function () {
 
 function hideNav(){
     nav.classList.remove('show');
+    navContainer.classList.remove('active');
     hamb.classList.remove('change'); 
 }
 

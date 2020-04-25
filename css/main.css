@@ -18,6 +18,8 @@ body {
   background-color: #f9f5f6;
   font-family: "Josefin Sans", sans-serif;
   line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Typography */
@@ -43,7 +45,7 @@ h3 {
 }
 
 span {
-  color: #a71829;
+  color: #da2439;
   font-weight: 400;
 }
 
@@ -58,8 +60,8 @@ span {
 
 a {
   text-decoration: none;
-  color: #a71829;
-  border-bottom: 1px solid #a71829;
+  color: #da2439;
+  border-bottom: 1px solid #da2439;
   -webkit-transition: all .1s;
   transition: all .1s;
   padding-bottom: 1px;
@@ -75,7 +77,11 @@ ul {
 }
 
 button {
-  background-color: #a71829;
+  background-color: #da2439;
+  color: #f9f5f6;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
   padding: 1.2em 2.6em;
   border: none;
   cursor: pointer;
@@ -84,7 +90,7 @@ button {
 }
 
 button:hover {
-  background-color: #c22235;
+  background-color: #fa2942;
 }
 
 button a {
@@ -102,7 +108,7 @@ button a:hover {
 /* Background absolute elements */
 .bg__container {
   position: fixed;
-  z-index: -10;
+  z-index: -1000;
 }
 
 .bg__container > img {
@@ -118,7 +124,7 @@ button a:hover {
 }
 
 .pizza {
-  top: 3%;
+  top: 4%;
   left: -10%;
 }
 
@@ -166,7 +172,7 @@ header {
   min-height: 8vh;
   position: -webkit-sticky;
   position: sticky;
-  z-index: 10;
+  z-index: 1000;
   border-bottom: 1px solid transparent;
   top: 0;
   left: 0;
@@ -201,7 +207,7 @@ header .header__container {
 }
 
 header .header__container .logo {
-  height: 2em;
+  height: 2.25em;
 }
 
 header .header__container .logo img {
@@ -220,15 +226,14 @@ header.colored {
 }
 
 .hamb-menu {
-  display: inline-block;
   cursor: pointer;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .hamb-menu .bar1, .hamb-menu .bar2, .hamb-menu .bar3 {
-  width: 33px;
+  width: 30px;
   height: 2px;
-  background-color: #a71829;
+  background-color: #da2439;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -259,20 +264,21 @@ header.colored {
   top: 0;
   right: 0;
   overflow: hidden;
+  visibility: hidden;
 }
 
 .nav__mobile {
   text-align: center;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #a71829;
+  background-color: #da2439;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
 }
 
 .nav__mobile ul {
   list-style: none;
-  padding: 5em 0;
+  padding-top: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -288,6 +294,7 @@ header.colored {
 .nav__mobile ul .dostava {
   color: #f9f5f6;
   background-color: #02020A;
+  padding-bottom: 2em;
 }
 
 .nav__mobile ul li {
@@ -298,19 +305,37 @@ header.colored {
   color: #f9f5f6;
   -webkit-transition: all .1s;
   transition: all .1s;
+  border-bottom: none;
 }
 
 .nav__mobile ul li a:hover {
   color: #f9f5f68f;
 }
 
-.nav__mobile .fb, .nav__mobile .insta {
+.nav__mobile .call {
   width: 20px;
   height: 20px;
+  fill: #f9f5f6;
+  margin-right: 3px;
+  margin-bottom: -4px;
+}
+
+.nav__mobile .fb, .nav__mobile .insta {
+  width: 25px;
+  height: 25px;
 }
 
 .nav__mobile .fb {
-  margin-right: 2.5em;
+  fill: #0084ff;
+  margin-right: 2em;
+}
+
+.nav__mobile .insta {
+  fill: url(#MyGradient);
+}
+
+.active {
+  visibility: visible;
 }
 
 .show {
@@ -321,7 +346,7 @@ header.colored {
 /* HERO - background image */
 .hero {
   min-height: 40vh;
-  background: url("/slike/logo-big.png");
+  background: url("../slike/logo-big.png");
   background-repeat: no-repeat;
   background-position: center;
   display: -webkit-box;
@@ -339,7 +364,7 @@ header.colored {
 .about {
   width: 80%;
   margin: auto;
-  padding: 7em 0 5em 0;
+  padding: 7em 0 9em 0;
 }
 
 .about .row {
@@ -353,12 +378,11 @@ header.colored {
 }
 
 .about .row:last-of-type {
-  margin-top: 10em;
+  margin-top: 7em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  margin-bottom: 7.5em;
 }
 
 .about p {
@@ -397,10 +421,9 @@ header.colored {
   background-color: #EFEAEC;
   -webkit-transform: skewY(5deg);
           transform: skewY(5deg);
-  padding: 10em 0 10em 0;
-  margin: 10em 0 5em 0;
+  padding: 5em 0 10em 0;
+  margin-top: 7em;
   position: relative;
-  z-index: 0;
 }
 
 .menu__container {
@@ -502,8 +525,8 @@ header.colored {
 
 .contact {
   width: 80%;
-  margin: 8em auto 0 auto;
-  padding-top: 7em;
+  margin: auto;
+  padding-top: 9em;
 }
 
 .contact .heading h1 {
@@ -611,9 +634,33 @@ header.colored {
     width: 40%;
   }
   .hero {
-    background: url("/slike/hero-bg.jpg");
+    background: url("../slike/hero-bg.jpg");
     background-size: contain;
     background-repeat: no-repeat;
+  }
+  .grapes {
+    top: 4%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .leaf {
+    top: 45%;
+    left: -2%;
+  }
+  .mushroom {
+    top: 45%;
+    right: -2%;
+  }
+  .olive {
+    top: 85%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .menu {
+    margin-top: 9em;
+    padding-bottom: 9em;
   }
 }
 
@@ -628,33 +675,13 @@ header.colored {
     top: -1%;
     left: -3%;
   }
-  .grapes {
-    top: 36%;
-    left: -1%;
-    -webkit-transform: rotate(-75deg);
-            transform: rotate(-75deg);
-  }
   .cheese {
     top: 2%;
-    right: -3%;
-  }
-  .leaf {
-    top: 59%;
-    left: -3%;
-  }
-  .mushroom {
-    top: 59%;
     right: -3%;
   }
   .forks {
     bottom: -5%;
     left: -5%;
-  }
-  .olive {
-    top: 34%;
-    right: -2%;
-    -webkit-transform: rotate(-70deg);
-            transform: rotate(-70deg);
   }
   .pizza-full {
     bottom: -4%;
@@ -720,7 +747,19 @@ header.colored {
 }
 
 @media screen and (min-width: 1020px) {
-  .hamb-menu, .nav__mobile .slideInNav {
+  .pizza, .cheese, .forks, .pizza-full {
+    width: 16em;
+  }
+  .leaf, .mushroom, .olive {
+    width: 9em;
+  }
+  .grapes {
+    width: 7em;
+  }
+  .olive {
+    top: 84%;
+  }
+  .slideInNav, .hamb-menu {
     display: none;
   }
   header .header__container .logo {
@@ -757,8 +796,8 @@ header.colored {
     transition: all .2s;
   }
   .nav-desktop ul li a:hover {
-    color: #a71829;
-    border-bottom: 1px solid #a71829;
+    color: #da2439;
+    border-bottom: 1px solid #da2439;
   }
   .about .row {
     -webkit-box-orient: horizontal;
@@ -826,6 +865,15 @@ header.colored {
 }
 
 @media screen and (min-width: 1220px) {
+  .pizza, .cheese, .forks, .pizza-full {
+    width: 17em;
+  }
+  .leaf, .mushroom, .olive {
+    width: 10em;
+  }
+  .grapes {
+    width: 8em;
+  }
   .hero {
     min-height: 50vh;
     background-size: cover;
@@ -856,8 +904,46 @@ header.colored {
 }
 
 @media screen and (min-width: 1400px) {
+  html {
+    font-size: 17px;
+  }
+  .about {
+    padding: 10em 0 13em 0;
+  }
+  .menu {
+    margin-top: 12em;
+  }
+  .pizza, .cheese, .forks, .pizza-full {
+    width: 20em;
+  }
+  .leaf, .mushroom, .olive {
+    width: 12em;
+  }
+  .grapes {
+    width: 10em;
+  }
+  .pizza {
+    left: -4%;
+  }
+  .pizza-full {
+    bottom: -10%;
+    right: -4%;
+  }
+  .forks {
+    bottom: -12%;
+    left: -5%;
+  }
+  .leaf {
+    top: 47%;
+  }
+  .mushroom {
+    top: 47%;
+  }
+  .olive {
+    top: 80%;
+  }
   .menu__photo-container {
-    width: 60%;
+    width: 55%;
   }
   .services__photo {
     width: 30%;
