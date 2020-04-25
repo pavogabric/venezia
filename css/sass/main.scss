@@ -4,7 +4,7 @@ $bg-prim-color: #f9f5f6;
 $bg-sec-color: #EFEAEC;
 
 $text-prim-color: #02020A;
-$text-sec-color: #a71829;
+$text-sec-color: #da2439;
 
 $font-primary: 'Josefin Sans', sans-serif;
 
@@ -39,6 +39,8 @@ body {
     background-color: $bg-prim-color;
     font-family: $font-primary;
     line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Typography */
@@ -99,13 +101,17 @@ ul {
 
 button {
     background-color: $text-sec-color;
+    color: $bg-prim-color;
+    font-family: $font-primary;
+    text-transform: uppercase;
+    font-weight: 700;
     padding: 1.2em 2.6em;
     border: none;
     cursor: pointer;
     transition: all .2s;
 
     &:hover {
-        background-color: rgb(194, 34, 53);
+        background-color: #fa2942;
     }
 
     a {
@@ -125,7 +131,7 @@ button {
 
 .bg__container {
     position: fixed;
-    z-index: -10;
+    z-index: -1000;
 }
 
 .bg__container > img {
@@ -141,7 +147,7 @@ button {
 }
 
 .pizza {
-    top: 3%;
+    top: 4%;
     left: -10%;
 }
 
@@ -188,7 +194,7 @@ button {
 header {
     min-height: 8vh;
     position: sticky;
-    z-index: 10;
+    z-index: 1000;
     border-bottom: 1px solid transparent;
     top: 0;
     left: 0;
@@ -206,7 +212,7 @@ header {
         justify-content: space-between;
 
         .logo {
-            height: 2em;
+            height: 2.25em;
             img {
                 height: 100%;
             }
@@ -225,16 +231,16 @@ header.colored {
 }
 
 .hamb-menu {
-    display: inline-block;
     cursor: pointer;
-    z-index: 100;
+    z-index: 1000;
 
     .bar1, .bar2, .bar3 {
-        width: 33px;
+        width: 30px;
         height: 2px;
         background-color: $text-sec-color;
         transition: all .3s;
     }
+
     .bar1, .bar2 {
         margin-bottom: 5px;
     }
@@ -257,6 +263,7 @@ header.colored {
     top: 0;
     right: 0;
     overflow: hidden;
+    visibility: hidden;
 }
 
 .nav__mobile { 
@@ -270,7 +277,7 @@ header.colored {
 
     ul {
         list-style: none;
-        padding: 5em 0;
+        padding-top: 3em;
         
         display: flex;
         flex-direction: column;
@@ -280,6 +287,7 @@ header.colored {
         .dostava {
             color: $bg-prim-color;
             background-color: #02020A;
+            padding-bottom: 2em;
         }
 
         li {
@@ -288,6 +296,7 @@ header.colored {
             a {
                 color: $bg-prim-color;
                 transition: all .1s;
+                border-bottom: none;
                 
                 &:hover {
                     color: #f9f5f68f;
@@ -296,13 +305,30 @@ header.colored {
         }
     }
 
-    .fb, .insta {
+    .call {
         width: 20px;
         height: 20px;
+        fill: $bg-prim-color;
+        margin-right: 3px;
+        margin-bottom: -4px;
+    }
+
+    .fb, .insta {
+        width: 25px;
+        height: 25px;
     }
     .fb {
-        margin-right: 2.5em;
+        fill: #0084ff;
+        margin-right: 2em;
     }
+    .insta {
+        // fill: $bg-prim-color;
+        fill: url(#MyGradient);
+    }
+}
+
+.active {
+    visibility: visible;
 }
 
 .show {
@@ -312,11 +338,13 @@ header.colored {
 
 
 
+
+
 /* HERO - background image */
 
 .hero {
     min-height: 40vh;
-    background: url('/slike/logo-big.png');
+    background: url('../slike/logo-big.png');
     background-repeat: no-repeat;
     background-position: center;
 
@@ -330,16 +358,15 @@ header.colored {
 .about {
     width: 80%;
     margin: auto;
-    padding: 7em 0 5em 0;
+    padding: 7em 0 9em 0;
 
     .row {
         display: flex;
         flex-direction: column;
 
         &:last-of-type {
-            margin-top: 10em;
+            margin-top: 7em;
             flex-direction: column-reverse;
-            margin-bottom: 7.5em;
         }
     }
 
@@ -383,46 +410,45 @@ header.colored {
 /* MENU - section */
 
 .menu {
-background-color: $bg-sec-color;
-transform: skewY(5deg);
-padding: 10em 0 10em 0; 
-margin: 10em 0 5em 0;
-position: relative;
-z-index: 0;
+    background-color: $bg-sec-color;
+    transform: skewY(5deg);
+    padding: 5em 0 10em 0;
+    margin-top: 7em;
+    position: relative;
 
-    &__container {
-        width: 80%;
-        margin: auto;
-        transform: skewY(-5deg);
-    }
-
-    &__photo {
-        width: 70%;
-        margin: 7em auto 0 auto;
-    
-        &-container {
-            position: relative; 
-
-            img {
-                width: 100%;
-                display: block;
-            }
-            img:first-child {
-                position: absolute;
-                top: 15px;
-                right: 15px;
-                z-index: -1;
-            }
+        &__container {
+            width: 80%;
+            margin: auto;
+            transform: skewY(-5deg);
         }
-    }
 
-    &__desc {
-
-        p {
-            margin: 1.25em 0 2.75em 0;
-        }
+        &__photo {
+            width: 70%;
+            margin: 7em auto 0 auto;
         
-    }
+            &-container {
+                position: relative; 
+
+                img {
+                    width: 100%;
+                    display: block;
+                }
+                img:first-child {
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    z-index: -1;
+                }
+            }
+        }
+
+        &__desc {
+
+            p {
+                margin: 1.25em 0 2.75em 0;
+            }
+            
+        }
 
 }
 
@@ -498,8 +524,8 @@ z-index: 0;
 
 .contact {
     width: 80%;
-    margin: 8em auto 0 auto;
-    padding-top: 7em;
+    margin: auto;
+    padding-top: 9em;
     
     
 
@@ -616,10 +642,38 @@ z-index: 0;
     }
 
     .hero {
-        background: url('/slike/hero-bg.jpg');
+        background: url('../slike/hero-bg.jpg');
         background-size: contain;
         background-repeat: no-repeat;
     }
+
+    .grapes {
+        top: 4%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .leaf {
+        top: 45%;
+        left: -2%;
+    }
+    
+    .mushroom {
+        top: 45%;
+        right: -2%;
+    }
+    
+    .olive {
+        top: 85%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .menu {
+        margin-top: 9em;
+        padding-bottom: 9em;
+    }
+    
 }
 
 @media screen and (min-width: $bp-tablet-2) {
@@ -636,36 +690,15 @@ z-index: 0;
         left: -3%;
     }
     
-    .grapes {
-        top: 36%;
-        left: -1%;
-        transform: rotate(-75deg);
-    }
-    
     .cheese {
         top: 2%;
         right: -3%;
     }
-    
-    .leaf {
-        top: 59%;
-        left: -3%;
-    }
-    
-    .mushroom {
-        top: 59%;
-        right: -3%;
-    }
+
     
     .forks {
         bottom: -5%;
         left: -5%;
-    }
-    
-    .olive {
-        top: 34%;
-        right: -2%;
-        transform: rotate(-70deg);
     }
     
     .pizza-full {
@@ -725,7 +758,23 @@ z-index: 0;
 
 @media screen and (min-width: $bp-laptop-1) {
 
-    .hamb-menu, .nav__mobile .slideInNav {
+    .pizza, .cheese, .forks, .pizza-full {
+        width: 16em;
+    }
+    
+    .leaf, .mushroom, .olive {
+        width: 9em;
+    }
+
+    .grapes {
+        width: 7em;
+    }
+
+    .olive {
+        top: 84%;
+    }
+
+    .slideInNav, .hamb-menu {
         display: none;
     }
 
@@ -838,6 +887,19 @@ z-index: 0;
 }
 
 @media screen and (min-width: $bp-desktop-1) {
+
+    .pizza, .cheese, .forks, .pizza-full {
+        width: 17em;
+    }
+    
+    .leaf, .mushroom, .olive {
+        width: 10em;
+    }
+
+    .grapes {
+        width: 8em;
+    }
+
     .hero {
         min-height: 50vh;
         background-size: cover;
@@ -864,8 +926,55 @@ z-index: 0;
 }
 
 @media screen and (min-width: $bp-desktop-2) {
+
+    html {
+        font-size: 17px;
+    }
+
+    .about {
+        padding: 10em 0 13em 0;
+    }
+
+    .menu {
+        margin-top: 12em;
+    }
+
+    .pizza, .cheese, .forks, .pizza-full {
+        width: 20em;
+    }
+    
+    .leaf, .mushroom, .olive {
+        width: 12em;
+    }
+    .grapes {
+        width: 10em;
+    }
+
+    .pizza {
+        left: -4%;
+    }
+
+    .pizza-full {
+        bottom: -10%;
+        right: -4%;
+    }
+
+    .forks {
+        bottom: -12%;
+        left: -5%;
+    }
+    .leaf {
+        top: 47%;
+    }
+    .mushroom {
+        top: 47%;
+    }
+
+    .olive {
+        top: 80%;
+    }
     .menu__photo-container {
-        width: 60%;
+        width: 55%;
     }
     .services__photo {
         width: 30%;
