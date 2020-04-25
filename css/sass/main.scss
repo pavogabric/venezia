@@ -444,6 +444,12 @@ header.colored {
 
         &__desc {
 
+            a {
+                padding-bottom: 0;
+                border-bottom: none;
+                color: $bg-prim-color;
+            }
+
             p {
                 margin: 1.25em 0 2.75em 0;
             }
