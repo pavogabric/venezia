@@ -38,7 +38,7 @@ html {
 body {
     background-color: $bg-prim-color;
     font-family: $font-primary;
-    line-height: 1.5;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -47,7 +47,7 @@ body {
 /* Typography */
 
 p {
-    font-size: 1em;
+    font-size: 1.07em;
     font-weight: 300;
 }
 
@@ -133,7 +133,7 @@ button {
 .fade-left {
     opacity: 0;
     transform: translateX(-75%);
-    transition: all 1s;
+    transition: all 1.25s;
 }
 
 .fade-left.appear {
@@ -144,7 +144,7 @@ button {
 .fade-right {
     opacity: 0;
     transform: translateX(75%);
-    transition: all 1s;
+    transition: all 1.25s;
 }
 
 .fade-right.appear {
@@ -155,7 +155,7 @@ button {
 .fade-up-heading {
     opacity: 0;
     transform: translateY(50%);
-    transition: all .5s;
+    transition: all 1s;
 }
 
 .fade-up-heading.appear {
@@ -338,7 +338,9 @@ header.colored {
     ul {
         list-style: none;
         padding-top: 3em;
-        
+        text-transform: lowercase;
+        font-size: 1.05em;
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -403,13 +405,13 @@ header.colored {
 /* HERO - background image */
 
 .hero {
-    height: 30vh;
-    background: url('../slike/logo-big.png');
+    height: 60vh;
+    background: url('../slike/hero-bg-mobile.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
-    background-size: contain;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -644,27 +646,24 @@ main {
                 font-size: 1em;
                 font-weight: 300;
             }
-        }
-    }
 
-    .icons {
-        width: 14px;
-        height: 14px;
-        margin-right: 10px;
+            &:last-of-type ul li {
+                display: flex;
+                align-items: center;
+            }
+        }
     }
 
     .social {
         color: $text-prim-color;
         border-bottom: none;
+        margin-right: 10px;
     }
 
 }
 
 /* MEDIA QUERY changes */
 @media screen and (min-width: $bp-mobile-1) {
-    html {
-        font-size: 14px;
-    }
 
     .pizza, .cheese, .forks, .pizza-full {
         width: 13em;
@@ -774,6 +773,10 @@ main {
 @media screen and (min-width: $bp-tablet-1) {
     html {
         font-size: 16px;
+    }
+
+    p {
+        font-size: 1em;
     }
 
     .contact__logo {
@@ -901,6 +904,10 @@ main {
     .services__desc {
         width: 60%;
         padding-right: 2.5em;
+
+        p {
+            padding-right: 1.5em;
+        }
     }
 
     .services__photo {
@@ -971,6 +978,7 @@ main {
         display: flex;
         list-style: none;
         white-space: nowrap;
+        text-transform: lowercase;
         justify-content: space-between;
 
             li {

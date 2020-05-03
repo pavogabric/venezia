@@ -17,7 +17,7 @@ html {
 body {
   background-color: #f9f5f6;
   font-family: "Josefin Sans", sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -25,7 +25,7 @@ body {
 
 /* Typography */
 p {
-  font-size: 1em;
+  font-size: 1.07em;
   font-weight: 300;
 }
 
@@ -111,8 +111,8 @@ button a:hover {
   opacity: 0;
   -webkit-transform: translateX(-75%);
           transform: translateX(-75%);
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 1.25s;
+  transition: all 1.25s;
 }
 
 .fade-left.appear {
@@ -125,8 +125,8 @@ button a:hover {
   opacity: 0;
   -webkit-transform: translateX(75%);
           transform: translateX(75%);
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 1.25s;
+  transition: all 1.25s;
 }
 
 .fade-right.appear {
@@ -139,8 +139,8 @@ button a:hover {
   opacity: 0;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .fade-up-heading.appear {
@@ -353,6 +353,8 @@ header.colored {
 .nav__mobile ul {
   list-style: none;
   padding-top: 3em;
+  text-transform: lowercase;
+  font-size: 1.05em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -419,13 +421,13 @@ header.colored {
 
 /* HERO - background image */
 .hero {
-  height: 30vh;
-  background: url("../slike/logo-big.png");
+  height: 60vh;
+  background: url("../slike/hero-bg-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
-  background-size: contain;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -662,22 +664,23 @@ main {
   font-weight: 300;
 }
 
-.contact .icons {
-  width: 14px;
-  height: 14px;
-  margin-right: 10px;
+.contact__info-box:last-of-type ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact .social {
   color: #02020A;
   border-bottom: none;
+  margin-right: 10px;
 }
 
 /* MEDIA QUERY changes */
 @media screen and (min-width: 560px) {
-  html {
-    font-size: 14px;
-  }
   .pizza, .cheese, .forks, .pizza-full {
     width: 13em;
   }
@@ -771,6 +774,9 @@ main {
 @media screen and (min-width: 760px) {
   html {
     font-size: 16px;
+  }
+  p {
+    font-size: 1em;
   }
   .contact__logo {
     width: 40%;
@@ -888,6 +894,9 @@ main {
     width: 60%;
     padding-right: 2.5em;
   }
+  .services__desc p {
+    padding-right: 1.5em;
+  }
   .services__photo {
     width: 40%;
   }
@@ -948,6 +957,7 @@ main {
     display: flex;
     list-style: none;
     white-space: nowrap;
+    text-transform: lowercase;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
