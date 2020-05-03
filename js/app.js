@@ -29,7 +29,7 @@ const fadeRight = document.querySelectorAll('.fade-right');
 const fadeLeft = document.querySelectorAll('.fade-left');
 
 const photosObserverOptions = {
-    threshold: 0.25
+    threshold: 0.1
 };
 
 const photosObserver = new IntersectionObserver(function(entries, photosObserver){
@@ -73,7 +73,7 @@ fadeUpHeadings.forEach(heading => {
 
 const fadeParagraphs = document.querySelectorAll('.fade-paragraphs');
 const fadeParagraphsOptions = {
-
+    rootMargin: "0px 0px 150px 0px"
 };
 
 const fadeParagraphsObserver = new IntersectionObserver(function(entries, fadeParagraphsObserver){
@@ -93,7 +93,7 @@ fadeParagraphs.forEach(paragraph => {
 
 const galleryFade = document.querySelectorAll('.gallery-fade');
 const galleryFadeOptions = {
-
+    threshold: 0.1
 };
 
 const galleryFadeObserver = new IntersectionObserver(function(entries, galleryFadeObserver){
@@ -110,59 +110,3 @@ const galleryFadeObserver = new IntersectionObserver(function(entries, galleryFa
 galleryFade.forEach(galleryPhoto => {
     galleryFadeObserver.observe(galleryPhoto);
 });
-// show on scroll
-
-// const photosRight = document.querySelectorAll('.fade-in-right');
-// const photosLeft = document.querySelectorAll('.fade-in-left');
-// const galleryPhotos = document.querySelectorAll('.fade-in-bottom');
-
-// const photosOptions = {
-//     threshold: 0.5
-// };
-
-
-// const photosObserver = new IntersectionObserver(function(entries, photosObserver){
-//     entries.forEach(entry => {
-//         if(!entry.isIntersecting) {
-//             return
-//         } else {
-//             entry.target.classList.add('appear');
-//             photosObserver.unobserve(entry.target);
-//         }
-//     })
-// }, photosOptions);
-
-// photosRight.forEach(photo => {
-//     photosObserver.observe(photo);
-// });
-
-// photosLeft.forEach(photo => {
-//     photosObserver.observe(photo);
-// });
-
-// galleryPhotos.forEach(galleryPhoto => {
-//     photosObserver.observe(galleryPhoto);
-// });
-
-
-
-
-// const textBlocks = document.querySelectorAll('.fade-text');
-
-// const textBlocksOptions = {
-// };
-
-// const textBlocksObserver = new IntersectionObserver(function(entries, textBlocksObserver){
-//     entries.forEach(entry => {
-//         if(!entry.isIntersecting) {
-//             return
-//         } else {
-//             entry.target.classList.add('appear');
-//             textBlocksObserver.unobserve(entry.target);
-//         }
-//     })
-// }, textBlocksOptions);
-
-// textBlocks.forEach(textBlock => {
-//     textBlocksObserver.observe(textBlock);
-// });
