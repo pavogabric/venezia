@@ -11,7 +11,7 @@ function showNav(){
 const navbar = document.querySelector('header');
 
 window.onscroll = function () {
-    if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    if(document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
         navbar.classList.add('colored');
     } else {
         navbar.classList.remove('colored');
@@ -29,7 +29,7 @@ const fadeRight = document.querySelectorAll('.fade-right');
 const fadeLeft = document.querySelectorAll('.fade-left');
 
 const photosObserverOptions = {
-    threshold: 0.1
+    threshold: 0.2
 };
 
 const photosObserver = new IntersectionObserver(function(entries, photosObserver){
@@ -53,7 +53,7 @@ fadeRight.forEach(photo => {
 
 const fadeUpHeadings = document.querySelectorAll('.fade-up-heading');
 const fadeUpHeadingsOptions = {
-    threshold: 1
+    rootMargin: "0px 0px 10px 0px"
 };
 
 const fadeUpHeadingsObserver = new IntersectionObserver(function(entries, fadeUpHeadingsObserver) {
