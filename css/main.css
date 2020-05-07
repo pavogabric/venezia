@@ -153,6 +153,8 @@ button a:hover {
   opacity: 1;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
   -webkit-transition: all .75s;
   transition: all .75s;
 }
@@ -447,7 +449,7 @@ main {
 .about {
   width: 80%;
   margin: auto;
-  padding: 7em 0 9em 0;
+  padding: 5em 0 7em 0;
 }
 
 .about .row {
@@ -677,6 +679,10 @@ main {
   color: #02020A;
   border-bottom: none;
   margin-right: 10px;
+}
+
+#map {
+  height: 350px;
 }
 
 /* MEDIA QUERY changes */

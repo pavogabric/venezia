@@ -166,6 +166,7 @@ button {
 .fade-paragraphs {
     opacity: 1;
     transform: translateY(50%);
+    filter: blur(.0px);
     transition: all .75s;
 }
 
@@ -426,7 +427,7 @@ main {
 .about {
     width: 80%;
     margin: auto;
-    padding: 7em 0 9em 0;
+    padding: 5em 0 7em 0;
 
     .row {
         display: flex;
@@ -660,6 +661,10 @@ main {
         margin-right: 10px;
     }
 
+}
+
+#map {
+    height: 350px;
 }
 
 /* MEDIA QUERY changes */
